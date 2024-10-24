@@ -4,12 +4,7 @@ from odoo.exceptions import ValidationError
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    #bu field contact statuse bağlanacak
-    contact_type = fields.Selection([
-        ('potential_vendor', 'Potential Vendor'),
-        ('potential_customer', 'Potential Customer')
-    ], string='Contact Type',
-    )
+
     SELECTION_OPTIONS = [
         ('inhouse', 'Inhouse'),
         ('outsource', 'Outsource'),
